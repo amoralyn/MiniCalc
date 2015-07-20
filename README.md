@@ -1,0 +1,2 @@
+# MiniCalc
+A simple calculator
