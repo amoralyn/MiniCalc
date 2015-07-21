@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <title>Calculator</title>
+</head>
+<body>
+    <div id="calculator">
+      <h1>Simple Calculator!</h1>
+      <form method="get" name="calc">
+        <input type="Number" id="num1" align="left" onchange="addtoscreen('num1')">
+        <input type="Number" id="num2" align="right" onchange="addtoscreen('num2')">
+      </form>
+        <br>
+        <form method="post">
+        <input type="button" id="keys" value="+" onclick="addtoscreen('+')">
+        <input type="button" id="keys" value="-" onclick="addtoscreen('-')">
+        <input type="button" id="keys" value="*" onclick="addtoscreen('*')">
+        <input type="button" id="keys" value="/" onclick="addtoscreen('/')">
+        <input type="button" id="keys" value="%" onclick="addtoscreen('%')">
+        <input type="button" id="keys" value="^" onclick="addtoscreen('^')">
+        <input type="button" id="keys" value="C" onclick="addtoscreen('C')">
+
+        <input type="button" id="equals" value="Compute" onclick="answer()">
+        <br><br>
+        <input type="text" id="display" disabled>
+      </form>
+
+
+    </div>
+
+
+
+
+<script type="text/javascript" src="scripts/calc.js"></script>
+</body>
+</html>
