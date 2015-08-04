@@ -13,19 +13,24 @@
       </form>
         <br>
        <!-- <form method="post"> -->
-        <input type="button" class="keys" id="addition" value="+" onclick="operation()">
-        <input type="button" class="keys" id="subtraction" value="-" onclick="operation()">
-        <input type="button" class="keys" id="multiplication" value="*" onclick="operation()">
-        <input type="button" class="keys" id="division" value="/" onclick="operation()">
-        <input type="button" class="keys" id="modulo" value="%" onclick="operation()">
-        <input type="button" class="keys" id="power" value="^" onclick="operation()">
-        <input type="button" class="keys" id="clear" value="C" onclick="operation()">
+        <input type="button" class="keys" id="addition" value="+" onclick="updateResultDisplay('+')">
+        <input type="button" class="keys" id="subtraction" value="-" onclick="updateResultDisplay('-')">
+        <br>
+        <input type="button" class="keys" id="multiplication" value="*" onclick="updateResultDisplay('*')">
+        <input type="button" class="keys" id="division" value="/" onclick="updateResultDisplay('/')">
+        <br>
+        <input type="button" class="keys" id="modulo" value="%" onclick="updateResultDisplay('%')">
+        <input type="button" class="keys" id="power" value="^" onclick="updateResultDisplay('^')">
+        <br>
+        <input type="button" class="keys" id="clear" value="C" onclick="updateResultDisplay('C')">
         <input type="button" class="keys" id="equal" value="Compute" onclick="compute()">
-        <br><br>
+        <br>
 
-        <div id="display" type="text" >
-          <h3>
-            Results will be displayed here
+        <div>
+          <h3 id="display" >
+              <div id="left"><h4 id="inputDisplay1"></h4></div>
+              <div id="center"><h4 id="operatorDisplay" ></h4></div>
+              <div id="right"><h4 id="inputDisplay2" ></h4></div>
           </h3>
         </div>
         <!-- <input type="text" id="display" disabled> -->
