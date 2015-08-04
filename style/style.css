@@ -9,26 +9,26 @@
   box-shadow: 0px 0px 30px gray;
 }
 
-#keys{
+.keys{
   width: 40px;
   height: 35px;
   margin-left: 10px;
   margin-bottom: 20px;
   box-shadow: 0px 0px 20px black;
 }
-#keys:hover{
+.keys:hover{
   background: purple;
   font-weight: bold;
 }
 
-#equals{
+#equal{
   width: 100px;
   height: 35px;
   margin-left: 10px;
   margin-bottom: 20px;
   box-shadow: 0px 0px 20px black;
 }
-#equals:hover{
+#equal:hover{
   background: purple;
   font-weight: bold;
 }

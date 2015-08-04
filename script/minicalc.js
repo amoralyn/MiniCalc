@@ -5,37 +5,37 @@ var user_input2 = parseInt(document.getElementById('num2').value);
 
 
 function getInput1() {
-    var resultDisplay = document.getElementById("display");
-    resultDisplay.value += parseInt(user_input1);
+    document.getElementById("display");
+    ('display').innerHTML = parseInt(user_input1);
 }
 
 function getInput2() {
-    var resultDisplay = document.getElementById("display");
-    resultDisplay.value += parseInt(user_input2);
+ var resultDisplay= document.getElementById("display");
+    ('display').innerHTML = parseInt(user_input2);
 }
 
-function operation(operator){
+function updateResultDisplay(operator){
 if(operator == '+'){
   var resultDisplay = document.getElementById("display");
-  resultDisplay.value ='+';}
+    ('display').innerHTML= '+';}
 else if(operator == '-'){
   var resultDisplay = document.getElementById("display");
-  resultDisplay.value += '-';}
+    ('display').innerHTML= '-';}
 else if(operator == '*'){
   var resultDisplay = document.getElementById("display");
-  resultDisplay.value += '*';}
+    ('display').innerHTML= '*';}
 else if(operator == '/'){
   var resultDisplay = document.getElementById("display");
-  resultDisplay.value += '/';}
+    ('display').innerHTML= '/';}
 else if(operator == '%'){
   var resultDisplay = document.getElementById("display");
-  resultDisplay.value += '%';}
+    ('display').innerHTML= '%';}
 else if(operator == '^'){
   var resultDisplay = document.getElementById("display");
-  resultDisplay.value += '^';}
+  ('display').innerHTML= '^';}
 else if(operator == 'C'){
   var resultDisplay = document.getElementById("display");
-  resultDisplay.value += ' ';}
+  ('display').innerHTML= ' ';}
 }
 
 function compute() {
