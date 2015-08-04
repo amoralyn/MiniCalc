@@ -8,20 +8,20 @@
     <div id="calculator">
       <h1>Simple Calculator!</h1>
       <form method="get" name="calc">
-        <input type="Number" id="num1" align="left" onchange="addtoscreen('num1')">
-        <input type="Number" id="num2" align="right" onchange="addtoscreen('num2')">
+        <input type="Number" id="num1" align="left" onchange="input1()">
+        <input type="Number" id="num2" align="right" onchange="input2()">
       </form>
         <br>
-        <form method="post">
-        <input type="button" id="keys" value="+" onclick="addtoscreen('addition()')">
-        <input type="button" id="keys" value="-" onclick="addtoscreen('subtraction()')">
-        <input type="button" id="keys" value="*" onclick="addtoscreen('multiplication()')">
-        <input type="button" id="keys" value="/" onclick="addtoscreen('division()')">
-        <input type="button" id="keys" value="%" onclick="addtoscreen('modulus()')">
-        <input type="button" id="keys" value="^" onclick="addtoscreen('power()')">
-        <input type="button" id="keys" value="C" onclick="addtoscreen('C')">
+       <!-- <form method="post"> -->
+        <input type="button" id="+" value="+" onclick="add()">
+        <input type="button" id="-" value="-" onclick="take()">
+        <input type="button" id="*" value="*" onclick="times()">
+        <input type="button" id="/" value="/" onclick="div()">
+        <input type="button" id="%" value="%" onclick="mod()">
+        <input type="button" id="^" value="^" onclick="power()">
+        <input type="button" id="C" value="C" onclick="addToScreen()">
 
-        <input type="button" id="equals" value="Compute" onclick="answer()">
+        <input type="button" id="equals" value="Compute" onclick="compute()">
         <br><br>
         <input type="text" id="display" disabled>
       </form>
@@ -32,6 +32,6 @@
 
 
 
-<script type="text/javascript" src="scripts/calc.js"></script>
+<script type="text/javascript" src="script/minicalc.js"></script>
 </body>
 </html>

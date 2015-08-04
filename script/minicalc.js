@@ -1,119 +1,67 @@
 var box = document.getElementById('display');
-var num1 = document.getElementById('num1');
-var num2 = document.getElementById('num2');
+var user_input1 = parseInt(document.getElementById('num1').value);
+var user_input2 = parseInt(document.getElementById('num2').value);
 
-// function addtoscreen(x){
 
-// //   box.value += x;
-// //   if (x=='C'){
 
-// //     box.value = '';
-// //   }
-// // }
+function input1() {
+    var display = document.getElementById("display");
+    display.value += parseInt(user_input);
+}
 
-// // function answer(){
-// //   x= box.value;
-// //   x= eval(x);
-// //   box.value=x;
+function input2() {
+    var display = document.getElementById("display");
+    display.value += parseInt(user_input2);
+}
+
+function add() {
+    var display = document.getElementById("display");
+    display.value += "+";
+}
+
+function take() {
+    var display = document.getElementById("display");
+    display.value += "-";
+}
+
+function times() {
+    var display = document.getElementById("display");
+    display.value += "*";
+}
+
+function div() {
+    var display = document.getElementById("display");
+    display.value += "/";
+}
+
+function mod() {
+    var display = document.getElementById("display");
+    display.value += "%";
+}
+
+function power() {
+    var display = document.getElementById("display");
+    display.value += "^";
+}
+
+function clear() {
+    var display = document.getElementById("display");
+    display.value += " ";
+}
+
+function compute() {
+    var display = document.getElementById("display");
+    display.value = eval(display.value);
+}
+
+// function compute(operator, num1, num2){
+// if(operator == '+'){return num1 + num2}
+//   else if (operator == '-'){return parseInt(num1) - parseInt(num2)}
+//   else if (operator == '*'){return parseInt(num1) * parseInt(num2)}
+//   else if (operator == '/'){return parseInt(num1) / parseInt(num2)}
+//   else if (operator == '%'){return parseInt(num1) % parseInt(num2)}
+//   else if (operator == '^'){return parseInt(num1) ^ parseInt(num2)}
 // }
 
 
-
-function addtoscreen(x)
-{
-  var user_input = num1.value;
-  var user_input1 = num2.value;
-  // box.value = user_input + x + user_input1;
-  // var new_number = user_input + x;
-  var result = document.getElementById('display');
-  result.value = box.value;
-
-  if(x == 'C'){
-    box.value = '';
-  }
-  // else if (x == '+') {
-  //   box.value = parseInt(user_input) + parseInt(user_input1)
-  // }else if (x == '-') {
-  //   box.value = parseInt(user_input) - parseInt(user_input1)
-  // }else if (x == '*') {
-  //   box.value = parseInt(user_input) * parseInt(user_input1)
-  // }else if (x == '/') {
-  //   box.value = parseInt(user_input) / parseInt(user_input1)
-  // }else if (x == '%') {
-  //   box.value = parseInt(user_input) % parseInt(user_input1)
-  // }else if (x == '^') {
-  //   box.value = parseInt(user_input) ^ parseInt(user_input1)
-  // }
-
-
-
-
-
-
-  box.innerHTML = box.innerHTML + x ;
-
-  
-}
-
-
-
-
-
-function answer(x)
-{
-
-  var user_input =  parseInt(num1.value);
-  var user_input1 = parseInt(num2.value);
-  // box.value = user_input;
-
-function addition(){
-  var user_input = num1.value;
-  var user_input1 = num2.value;
-document.getElementById("display").innerHTML = user_input + " + " + user_input1 +  " = " + (parseInt(user_input) + parseInt(user_input1));
-}
-function subtraction(){
-  var user_input = num1.value;
-  var user_input1 = num2.value;
-document.getElementById("display").innerHTML = user_input + " - " + user_input1 +  " = " + (parseInt(user_input) - parseInt(user_input1));
-
-}
-
-function division(){
-  var user_input = num1.value;
-  var user_input1 = num2.value;
-document.getElementById("display").innerHTML = user_input + " / " + user_input1 +  " = " + (parseInt(user_input) / parseInt(user_input1));
-
-}
-
-function multiplication(){
-  var user_input = num1.value;
-  var user_input1 = num2.value;
-document.getElementById("display").innerHTML = user_input + " * " + user_input1 +  " = " + (parseInt(user_input) * parseInt(user_input1));
-
-}
-
-function modulus(){
-  var user_input = num1.value;
-  var user_input1 = num2.value;
-document.getElementById("display").innerHTML = user_input + " % " + user_input1 +  " = " + (parseInt(user_input) % parseInt(user_input1));
-
-}
-function power(){
-  var user_input = num1.value;
-  var user_input1 = num2.value;
-document.getElementById("display").innerHTML = user_input + " ^ " + user_input1 +  " = " + Math.pow(parseInt(user_input), parseInt(user_input1));
-
-}
-  // var new_number = user_input + x;
-  // var new_number1 = new_number + user_input1;
- result = user_input + x + user_input1;
-  console.log(user_input);
-  console.log(user_input1);
-  console.log(box.value);
-  
-  // console.log(new_number);
-  // console.log(new_number1);
-  // var resultString = num2.value +" = " + result;
-    addtoscreen(result);
-  console.log(result);
 
