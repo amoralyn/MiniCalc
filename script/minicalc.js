@@ -1,58 +1,50 @@
-var box = document.getElementById('display');
+var resultDisplay = document.getElementById('display');
 var user_input1 = parseInt(document.getElementById('num1').value);
 var user_input2 = parseInt(document.getElementById('num2').value);
 
 
 
-function input1() {
-    var display = document.getElementById("display");
-    display.value += parseInt(user_input);
+function getInput1() {
+    var resultDisplay = document.getElementById("display");
+    resultDisplay.value += parseInt(user_input1);
 }
 
-function input2() {
-    var display = document.getElementById("display");
-    display.value += parseInt(user_input2);
+function getInput2() {
+    var resultDisplay = document.getElementById("display");
+    resultDisplay.value += parseInt(user_input2);
 }
 
-function add() {
-    var display = document.getElementById("display");
-    display.value += "+";
-}
-
-function take() {
-    var display = document.getElementById("display");
-    display.value += "-";
-}
-
-function times() {
-    var display = document.getElementById("display");
-    display.value += "*";
-}
-
-function div() {
-    var display = document.getElementById("display");
-    display.value += "/";
-}
-
-function mod() {
-    var display = document.getElementById("display");
-    display.value += "%";
-}
-
-function power() {
-    var display = document.getElementById("display");
-    display.value += "^";
-}
-
-function clear() {
-    var display = document.getElementById("display");
-    display.value += " ";
+function operation(operator){
+if(operator == '+'){
+  var resultDisplay = document.getElementById("display");
+  resultDisplay.value ='+';}
+else if(operator == '-'){
+  var resultDisplay = document.getElementById("display");
+  resultDisplay.value += '-';}
+else if(operator == '*'){
+  var resultDisplay = document.getElementById("display");
+  resultDisplay.value += '*';}
+else if(operator == '/'){
+  var resultDisplay = document.getElementById("display");
+  resultDisplay.value += '/';}
+else if(operator == '%'){
+  var resultDisplay = document.getElementById("display");
+  resultDisplay.value += '%';}
+else if(operator == '^'){
+  var resultDisplay = document.getElementById("display");
+  resultDisplay.value += '^';}
+else if(operator == 'C'){
+  var resultDisplay = document.getElementById("display");
+  resultDisplay.value += ' ';}
 }
 
 function compute() {
-    var display = document.getElementById("display");
-    display.value = eval(display.value);
+    var resultDisplay = document.getElementById("display");
+    resultDisplay.value = eval(resultDisplay.value);
 }
+
+
+
 
 // function compute(operator, num1, num2){
 // if(operator == '+'){return num1 + num2}

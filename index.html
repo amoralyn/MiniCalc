@@ -8,23 +8,22 @@
     <div id="calculator">
       <h1>Simple Calculator!</h1>
       <form method="get" name="calc">
-        <input type="Number" id="num1" align="left" onchange="input1()">
-        <input type="Number" id="num2" align="right" onchange="input2()">
+        <input type="Number" id="num1" align="left" onchange="getInput1()">
+        <input type="Number" id="num2" align="right" onchange="getInput2()">
       </form>
         <br>
        <!-- <form method="post"> -->
-        <input type="button" id="+" value="+" onclick="add()">
-        <input type="button" id="-" value="-" onclick="take()">
-        <input type="button" id="*" value="*" onclick="times()">
-        <input type="button" id="/" value="/" onclick="div()">
-        <input type="button" id="%" value="%" onclick="mod()">
-        <input type="button" id="^" value="^" onclick="power()">
-        <input type="button" id="C" value="C" onclick="addToScreen()">
-
+        <input type="button" id="+" value="+" onclick="operation()">
+        <input type="button" id="-" value="-" onclick="operation()">
+        <input type="button" id="*" value="*" onclick="operation()">
+        <input type="button" id="/" value="/" onclick="operation()">
+        <input type="button" id="%" value="%" onclick="operation()">
+        <input type="button" id="^" value="^" onclick="operation()">
+        <input type="button" id="C" value="C" onclick="operation()">
         <input type="button" id="equals" value="Compute" onclick="compute()">
         <br><br>
         <input type="text" id="display" disabled>
-      </form>
+      <!-- </form> -->
 
 
     </div>
