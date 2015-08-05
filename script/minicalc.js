@@ -72,6 +72,7 @@ function compute() {
     console.log(resultDisplay.value);
     var FinalResultDisplay = document.getElementById("finalResultDisplay");
     finalResultDisplay.innerHTML = /*'The result is ',*/ eval(resultDisplay.value);
+    console.log(eval(resultDisplay.value));
 }
 
 

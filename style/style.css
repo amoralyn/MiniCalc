@@ -16,10 +16,10 @@
   margin-bottom: 20px;
   box-shadow: 0px 0px 20px black;
 }
-.keys:hover{
+/*.keys:hover{
   background: purple;
   font-weight: bold;
-}
+}*/
 
 #equal{
   width: 100px;
@@ -28,10 +28,10 @@
   margin-bottom: 20px;
   box-shadow: 0px 0px 20px black;
 }
-#equal:hover{
+/*#equal:hover{
   background: purple;
   font-weight: bold;
-}
+}*/
 
 #resultDisplay{
   margin-top: 66px;
