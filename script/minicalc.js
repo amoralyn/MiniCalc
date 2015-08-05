@@ -70,7 +70,7 @@ function compute() {
     console.log("The result is ...");
     var  operatorDisplay = document.getElementById("operatorDisplay");
     var resultDisplay = document.getElementById("resultDisplay");
-    resultDisplay.innerHTML = eval(operatorDisplay.value);
+    resultDisplay.innerHTML = /*'The result is ',*/ eval(operatorDisplay.value);
 }
 
 
