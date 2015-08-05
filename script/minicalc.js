@@ -5,61 +5,72 @@ var inputDisplay2 = document.getElementById('inputDisplay2');
 
 
 function getInput1() {
-  console.log(user_input1, 'has been called');
   var user_input1 = parseInt(document.getElementById('num1').value); 
   var inputDisplay1 = document.getElementById("inputDisplay1");
   inputDisplay1.innerHTML = parseInt(user_input1);
+  console.log(user_input1, 'has been called');
 }
 
 function getInput2() {
-  console.log("I'm working fine!");
   var user_input2 = parseInt(document.getElementById('num2').value);
   var inputDisplay2= document.getElementById("inputDisplay2");
   inputDisplay2.innerHTML += parseInt(user_input2);
+  console.log(user_input2, 'has been called');
 }
 
 function updateResultDisplay(operator){
     if(operator == '+'){
       var  operatorDisplay = document.getElementById("operatorDisplay");
-       operatorDisplay.innerHTML = '+';
+      operatorDisplay.innerHTML = '+';
+      console.log(operator, " has been called!");
     }
 
     else if(operator == '-'){
       var  operatorDisplay = document.getElementById("operatorDisplay");
-       operatorDisplay.innerHTML += '-';
+      operatorDisplay.innerHTML += '-';
+      console.log(operator, " has been called!");
     }
 
     else if(operator == '*'){
-      console.log(operator, " has been called!");
       var  operatorDisplay = document.getElementById("operatorDisplay");
-       operatorDisplay.innerHTML += '*';
+      operatorDisplay.innerHTML += '*';
+      console.log(operator, " has been called!");
     }
 
     else if(operator == '/'){
       var  operatorDisplay = document.getElementById("operatorDisplay");
       operatorDisplay.innerHTML += '/';
+      console.log(operator, " has been called!");
     }
 
     else if(operator == '%'){
       var  operatorDisplay = document.getElementById("operatorDisplay");
-       operatorDisplay.innerHTML += '%';
+      operatorDisplay.innerHTML += '%';
+      console.log(operator, " has been called!");
     }
 
     else if(operator == '^'){
       var  operatorDisplay = document.getElementById("operatorDisplay");
-       operatorDisplay.innerHTML += '^';
+      operatorDisplay.innerHTML += '^';
+      console.log(operator, " has been called!");
     }
 
     else if(operator == 'C'){
       var  operatorDisplay = document.getElementById("operatorDisplay");
-       operatorDisplay.innerHTML= ' ';
+      operatorDisplay.innerHTML= ' ';
+      var inputDisplay1 = document.getElementById("inputDisplay1");
+      inputDisplay1.innerHTML = ' ';
+      var inputDisplay2 = document.getElementById("inputDisplay2");
+      inputDisplay2.innerHTML = ' ';
     }
 }
 
+
 function compute() {
     console.log("The result is ...");
+    var  operatorDisplay = document.getElementById("operatorDisplay");
     var resultDisplay = document.getElementById("resultDisplay");
-    resultDisplay.value.innerHTML = eval(operatorDisplay.value);
+    resultDisplay.innerHTML = eval(operatorDisplay.value);
 }
 
 
