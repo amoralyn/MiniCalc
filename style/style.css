@@ -33,7 +33,7 @@
   font-weight: bold;
 }
 
-#display{
+#resultDisplay{
   margin-top: 66px;
   margin-bottom: 20px;
   margin-left: -5px;
@@ -92,7 +92,7 @@
   margin-top: -30px;
 }
 
-#resultDisplay{
+#finalResultDisplay{
   background:peachpuff;
   color: blue;
   margin-left: 385px;

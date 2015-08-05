@@ -68,9 +68,10 @@ function updateResultDisplay(operator){
 
 function compute() {
     console.log("The result is ...");
-    var  operatorDisplay = document.getElementById("operatorDisplay");
-    var resultDisplay = document.getElementById("resultDisplay");
-    resultDisplay.innerHTML = /*'The result is ',*/ eval(operatorDisplay.value);
+    var  resultDisplay = document.getElementById("resultDisplay");
+    console.log(resultDisplay.value);
+    var FinalResultDisplay = document.getElementById("finalResultDisplay");
+    finalResultDisplay.innerHTML = /*'The result is ',*/ eval(resultDisplay.value);
 }
 
 
