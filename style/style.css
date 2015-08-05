@@ -53,7 +53,9 @@
 
 #left{
   float: left;
-  width: 100px;
+  width: 50px;
+  height: 45px;
+  margin-top: -9px;
 }
 
 #operatorDisplay{
@@ -66,8 +68,10 @@
 }
 
 #center{
-  margin:0, auto;
+  margin: auto;
   width: 100px;
+  padding-left: 45px;
+  padding-top: 20px;
 }
 
 #inputDisplay2{
@@ -81,5 +85,16 @@
 
 #right{
   float: right;
-  width: 100px;
+  width: 50px;
+  height: 45px;
+  margin-left: 400px;
+  margin-top: -30px;
+}
+
+#resultDisplay{
+  background:peachpuff;
+  color: blue;
+  margin-left: 385px;
+  width: 220px;
+  height: 100px;
 }

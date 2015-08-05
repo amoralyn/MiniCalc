@@ -57,8 +57,9 @@ function updateResultDisplay(operator){
 }
 
 function compute() {
-    var resultDisplay = document.getElementById("display");
-    resultDisplay.value = eval(resultDisplay.value);
+    console.log("The result is ...");
+    var resultDisplay = document.getElementById("resultDisplay");
+    resultDisplay.value.innerHTML = eval(operatorDisplay.value);
 }
 
 
