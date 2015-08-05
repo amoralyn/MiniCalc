@@ -7,14 +7,14 @@ var inputDisplay2 = document.getElementById('inputDisplay2');
 function getInput1() {
   var user_input1 = parseInt(document.getElementById('num1').value); 
   var inputDisplay1 = document.getElementById("inputDisplay1");
-  inputDisplay1.innerHTML = parseInt(user_input1);
+  inputDisplay1.innerHTML = user_input1;
   console.log(user_input1, 'has been called');
 }
 
 function getInput2() {
   var user_input2 = parseInt(document.getElementById('num2').value);
   var inputDisplay2= document.getElementById("inputDisplay2");
-  inputDisplay2.innerHTML += parseInt(user_input2);
+  inputDisplay2.innerHTML += user_input2;
   console.log(user_input2, 'has been called');
 }
 
@@ -66,26 +66,49 @@ function updateResultDisplay(operator){
 }
 
 
-function compute() {
-    console.log("The result is ...");
-    var  resultDisplay = document.getElementById("resultDisplay");
-    console.log(resultDisplay.value);
-    var FinalResultDisplay = document.getElementById("finalResultDisplay");
-    finalResultDisplay.innerHTML = /*'The result is ',*/ eval(resultDisplay.value);
-    console.log(eval(resultDisplay.value));
-}
-
-
-
-
-// function compute(operator, num1, num2){
-// if(operator == '+'){return num1 + num2}
-//   else if (operator == '-'){return parseInt(num1) - parseInt(num2)}
-//   else if (operator == '*'){return parseInt(num1) * parseInt(num2)}
-//   else if (operator == '/'){return parseInt(num1) / parseInt(num2)}
-//   else if (operator == '%'){return parseInt(num1) % parseInt(num2)}
-//   else if (operator == '^'){return parseInt(num1) ^ parseInt(num2)}
+// function compute() {
+//     var  resultDisplay = document.getElementById("resultDisplay");
+//     console.log(resultDisplay.value);
+//     var FinalResultDisplay = document.getElementById("finalResultDisplay");
+//     finalResultDisplay.innerHTML = /*'The result is ',*/ eval(resultDisplay.value);
+//     console.log(eval(resultDisplay.value));
 // }
+
+
+
+
+function compute(){
+  var user_input1 = parseInt(document.getElementById('num1').value);
+  var user_input2 = parseInt(document.getElementById('num2').value);
+  var  operatorDisplay = document.getElementById("operatorDisplay");
+  console.log(user_input1);
+  console.log(operatorDisplay.innerHTML);
+  console.log(user_input2);
+  if(operatorDisplay.innerHTML == '+'){
+    return user_input1+ user_input2
+  }
+    else if (operatorDisplay.innerHTML == '-'){
+      return user_input1- user_input2
+    }
+    else if (operatorDisplay.innerHTML == '*'){
+      return user_input1* user_input2
+    }
+    else if (operatorDisplay.innerHTML == '/'){
+      return user_input1/ user_input2
+    }
+    else if (operatorDisplay.innerHTML == '%'){
+      return user_input1% user_input2
+    }
+    else if (operatorDisplay.innerHTML == '^'){
+      return user_input1^ user_input2
+    }
+//   var  resultDisplay = document.getElementById("resultDisplay");
+//   console.log(resultDisplay.value);
+//   var FinalResultDisplay = document.getElementById("finalResultDisplay");
+//   finalResultDisplay.innerHTML = /*'The result is ',*/ eval(resultDisplay.value);
+//   console.log(eval(resultDisplay.value));
+// }
+}
 
 
 
