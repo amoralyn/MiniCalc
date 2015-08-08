@@ -1,25 +1,26 @@
 var operatorDisplay = document.getElementById('display');
 var inputDisplay1 = document.getElementById('inputDisplay1');
 var inputDisplay2 = document.getElementById('inputDisplay2');
-var firstInput;
-var secondInput;
-var operator;
+var user_input1;
+var user_input2;
+var result;
 
 
 function getInput1() {
-  var user_input1 = parseInt(document.getElementById('num1').value); 
+  user_input1 = parseInt(document.getElementById('num1').value); 
   var inputDisplay1 = document.getElementById("inputDisplay1");
   inputDisplay1.innerHTML = user_input1;
+  // user_input1 = inputDisplay1.innerHTML;
   console.log(user_input1, 'has been called');
-  firstInput = inputDisplay1.innerHTML;
+ 
 }
 
 function getInput2() {
-  var user_input2 = parseInt(document.getElementById('num2').value);
+  user_input2 = parseInt(document.getElementById('num2').value);
   var inputDisplay2= document.getElementById("inputDisplay2");
   inputDisplay2.innerHTML += user_input2;
   console.log(user_input2, 'has been called');
-  secondInput = inputDisplay2.innerHTML;
+  // secondInput = inputDisplay2.innerHTML;
 }
 
 function updateResultDisplay(operator){
@@ -27,36 +28,46 @@ function updateResultDisplay(operator){
       var  operatorDisplay = document.getElementById("operatorDisplay");
       operatorDisplay.innerHTML = '+';
       console.log(operator, " has been called!");
+      result = user_input1 + user_input2;
+      // console.log(user_input1);
+      // console.log(user_input2);
+
     }
+      
 
     else if(operator == '-'){
       var  operatorDisplay = document.getElementById("operatorDisplay");
-      operatorDisplay.innerHTML += '-';
+      operatorDisplay.innerHTML = '-';
       console.log(operator, " has been called!");
+      result = firstInput - secondInput;
     }
 
     else if(operator == '*'){
       var  operatorDisplay = document.getElementById("operatorDisplay");
-      operatorDisplay.innerHTML += '*';
+      operatorDisplay.innerHTML = '*';
       console.log(operator, " has been called!");
+      result = firstInput * secondInput;
     }
 
     else if(operator == '/'){
       var  operatorDisplay = document.getElementById("operatorDisplay");
-      operatorDisplay.innerHTML += '/';
+      operatorDisplay.innerHTML = '/';
       console.log(operator, " has been called!");
+      result = firstInput / secondInput;
     }
 
     else if(operator == '%'){
       var  operatorDisplay = document.getElementById("operatorDisplay");
-      operatorDisplay.innerHTML += '%';
+      operatorDisplay.innerHTML = '%';
       console.log(operator, " has been called!");
+      result = firstInput % secondInput;
     }
 
     else if(operator == '^'){
       var  operatorDisplay = document.getElementById("operatorDisplay");
       operatorDisplay.innerHTML += '^';
       console.log(operator, " has been called!");
+      result = firstInput ^ secondInput;
     }
 
     else if(operator == 'C'){
@@ -67,7 +78,9 @@ function updateResultDisplay(operator){
       var inputDisplay2 = document.getElementById("inputDisplay2");
       inputDisplay2.innerHTML = ' ';
     }
-    operator = operatorDisplay.innerHTML;
+    
+    
+
 }
 
 
@@ -84,11 +97,12 @@ function updateResultDisplay(operator){
 
 function compute(){
   var finalResultDisplay = document.getElementById('finalResultDisplay');
-  finalResultDisplay.innerHTML = eval(firstInput, operator, secondInput);
-  console.log('The result is ...', finalResultDisplay.innerHTML);
-  console.log(firstInput);
-  console.log(secondInput);
-  console.log(operator);
+  console.log(result);
+  console.log('The result is ...', result);
+  finalResultDisplay.innerHTML = result;
+  // console.log(firstInput);
+  // console.log(secondInput);
+  // console.log(result);
   // var  operatorDisplay = document.getElementById("operatorDisplay");
   // console.log(user_input1);
   // console.log(operatorDisplay.innerHTML);
