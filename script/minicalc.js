@@ -3,6 +3,7 @@ var inputDisplay1 = document.getElementById('inputDisplay1');
 var inputDisplay2 = document.getElementById('inputDisplay2');
 var user_input1;
 var user_input2;
+var operators;
 var result;
 
 
@@ -28,7 +29,6 @@ function updateResultDisplay(operator){
       var  operatorDisplay = document.getElementById("operatorDisplay");
       operatorDisplay.innerHTML = '+';
       console.log(operator, " has been called!");
-      result = user_input1 + user_input2;
       // console.log(user_input1);
       // console.log(user_input2);
 
@@ -39,35 +39,30 @@ function updateResultDisplay(operator){
       var  operatorDisplay = document.getElementById("operatorDisplay");
       operatorDisplay.innerHTML = '-';
       console.log(operator, " has been called!");
-      result = firstInput - secondInput;
     }
 
     else if(operator == '*'){
       var  operatorDisplay = document.getElementById("operatorDisplay");
       operatorDisplay.innerHTML = '*';
       console.log(operator, " has been called!");
-      result = firstInput * secondInput;
     }
 
     else if(operator == '/'){
       var  operatorDisplay = document.getElementById("operatorDisplay");
       operatorDisplay.innerHTML = '/';
       console.log(operator, " has been called!");
-      result = firstInput / secondInput;
     }
 
     else if(operator == '%'){
       var  operatorDisplay = document.getElementById("operatorDisplay");
       operatorDisplay.innerHTML = '%';
       console.log(operator, " has been called!");
-      result = firstInput % secondInput;
     }
 
     else if(operator == '^'){
       var  operatorDisplay = document.getElementById("operatorDisplay");
-      operatorDisplay.innerHTML += '^';
+      operatorDisplay.innerHTML = '^';
       console.log(operator, " has been called!");
-      result = firstInput ^ secondInput;
     }
 
     else if(operator == 'C'){
@@ -78,7 +73,8 @@ function updateResultDisplay(operator){
       var inputDisplay2 = document.getElementById("inputDisplay2");
       inputDisplay2.innerHTML = ' ';
     }
-    
+    operators = operatorDisplay.innerHTML;
+
     
 
 }
@@ -97,41 +93,28 @@ function updateResultDisplay(operator){
 
 function compute(){
   var finalResultDisplay = document.getElementById('finalResultDisplay');
+  if(operators == '+'){
+  result = user_input1 + user_input2
+  }
+  else if(operators == '-'){
+    result = user_input1 - user_input2
+  }
+  else if(operators == '*'){
+    result = user_input1 * user_input2
+  }
+  else if(operators == '/'){
+    result = user_input1 / user_input2
+  }
+  else if(operators == '%'){
+    result = user_input1 % user_input2
+  }
+  else if(operators == '^'){
+    result = user_input1 ^ user_input2
+  }
+  else {
+    'select an operator'
+  }
+  finalResultDisplay.innerHTML = result;
   console.log(result);
   console.log('The result is ...', result);
-  finalResultDisplay.innerHTML = result;
-  // console.log(firstInput);
-  // console.log(secondInput);
-  // console.log(result);
-  // var  operatorDisplay = document.getElementById("operatorDisplay");
-  // console.log(user_input1);
-  // console.log(operatorDisplay.innerHTML);
-  // console.log(user_input2);
-  // if(operatorDisplay.innerHTML == '+'){
-  //   return user_input1+ user_input2
-  // }
-  //   else if (operatorDisplay.innerHTML == '-'){
-  //     return user_input1- user_input2
-  //   }
-  //   else if (operatorDisplay.innerHTML == '*'){
-  //     return user_input1* user_input2
-  //   }
-  //   else if (operatorDisplay.innerHTML == '/'){
-  //     return user_input1/ user_input2
-  //   }
-  //   else if (operatorDisplay.innerHTML == '%'){
-  //     return user_input1% user_input2
-  //   }
-  //   else if (operatorDisplay.innerHTML == '^'){
-  //     return user_input1^ user_input2
-  //   }
-//   var  resultDisplay = document.getElementById("resultDisplay");
-//   console.log(resultDisplay.value);
-//   var FinalResultDisplay = document.getElementById("finalResultDisplay");
-//   finalResultDisplay.innerHTML = /*'The result is ',*/ eval(resultDisplay.value);
-//   console.log(eval(resultDisplay.value));
-// }
 }
-
-
-
