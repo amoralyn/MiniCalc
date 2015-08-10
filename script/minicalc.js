@@ -10,45 +10,36 @@ var result;
 function getInput1() {
   user_input1 = parseInt(document.getElementById('num1').value); 
   inputDisplay1.innerHTML = user_input1;
-  console.log(user_input1, 'has been called');
- 
 }
 
 function getInput2() {
   user_input2 = parseInt(document.getElementById('num2').value);
   inputDisplay2.innerHTML += user_input2;
-  console.log(user_input2, 'has been called');
-  }
+}
 
 function updateResultDisplay(operator){
     if(operator == '+'){
       operatorDisplay.innerHTML = '+';
-      console.log(operator, " has been called!");
     }
     
     else if(operator == '-'){
       operatorDisplay.innerHTML = '-';
-      console.log(operator, " has been called!");
     }
 
     else if(operator == '*'){
       operatorDisplay.innerHTML = '*';
-      console.log(operator, " has been called!");
     }
 
     else if(operator == '/'){
       operatorDisplay.innerHTML = '/';
-      console.log(operator, " has been called!");
     }
 
     else if(operator == '%'){
       operatorDisplay.innerHTML = '%';
-      console.log(operator, " has been called!");
     }
 
     else if(operator == '^'){
       operatorDisplay.innerHTML = '^';
-      console.log(operator, " has been called!");
     }
 
     else if(operator == 'C'){
@@ -85,7 +76,7 @@ function compute(){
   else {
     result = 'select an operator';
   }
-  finalResultDisplay.innerHTML = result;
-  console.log(result);
-  console.log('The result is' , result);
+  finalResultDisplay.innerHTML = 'The result of ' + user_input1 + operators + user_input2 + ' is ' + result;
+  
+
 }
