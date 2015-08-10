@@ -1,4 +1,4 @@
-var operatorDisplay = document.getElementById('display');
+var operatorDisplay = document.getElementById('operatorDisplay');
 var inputDisplay1 = document.getElementById('inputDisplay1');
 var inputDisplay2 = document.getElementById('inputDisplay2');
 var user_input1;
@@ -9,68 +9,51 @@ var result;
 
 function getInput1() {
   user_input1 = parseInt(document.getElementById('num1').value); 
-  var inputDisplay1 = document.getElementById("inputDisplay1");
   inputDisplay1.innerHTML = user_input1;
-  // user_input1 = inputDisplay1.innerHTML;
   console.log(user_input1, 'has been called');
  
 }
 
 function getInput2() {
   user_input2 = parseInt(document.getElementById('num2').value);
-  var inputDisplay2= document.getElementById("inputDisplay2");
   inputDisplay2.innerHTML += user_input2;
   console.log(user_input2, 'has been called');
-  // secondInput = inputDisplay2.innerHTML;
-}
+  }
 
 function updateResultDisplay(operator){
     if(operator == '+'){
-      var  operatorDisplay = document.getElementById("operatorDisplay");
       operatorDisplay.innerHTML = '+';
       console.log(operator, " has been called!");
-      // console.log(user_input1);
-      // console.log(user_input2);
-
     }
-      
-
+    
     else if(operator == '-'){
-      var  operatorDisplay = document.getElementById("operatorDisplay");
       operatorDisplay.innerHTML = '-';
       console.log(operator, " has been called!");
     }
 
     else if(operator == '*'){
-      var  operatorDisplay = document.getElementById("operatorDisplay");
       operatorDisplay.innerHTML = '*';
       console.log(operator, " has been called!");
     }
 
     else if(operator == '/'){
-      var  operatorDisplay = document.getElementById("operatorDisplay");
       operatorDisplay.innerHTML = '/';
       console.log(operator, " has been called!");
     }
 
     else if(operator == '%'){
-      var  operatorDisplay = document.getElementById("operatorDisplay");
       operatorDisplay.innerHTML = '%';
       console.log(operator, " has been called!");
     }
 
     else if(operator == '^'){
-      var  operatorDisplay = document.getElementById("operatorDisplay");
       operatorDisplay.innerHTML = '^';
       console.log(operator, " has been called!");
     }
 
     else if(operator == 'C'){
-      var  operatorDisplay = document.getElementById("operatorDisplay");
       operatorDisplay.innerHTML= ' ';
-      var inputDisplay1 = document.getElementById("inputDisplay1");
       inputDisplay1.innerHTML = ' ';
-      var inputDisplay2 = document.getElementById("inputDisplay2");
       inputDisplay2.innerHTML = ' ';
     }
     operators = operatorDisplay.innerHTML;
@@ -78,18 +61,6 @@ function updateResultDisplay(operator){
     
 
 }
-
-
-// function compute() {
-//     var  resultDisplay = document.getElementById("resultDisplay");
-//     console.log(resultDisplay.value);
-//     var FinalResultDisplay = document.getElementById("finalResultDisplay");
-//     finalResultDisplay.innerHTML = /*'The result is ',*/ eval(resultDisplay.value);
-//     console.log(eval(resultDisplay.value));
-// }
-
-
-
 
 function compute(){
   var finalResultDisplay = document.getElementById('finalResultDisplay');
@@ -112,9 +83,9 @@ function compute(){
     result = user_input1 ^ user_input2
   }
   else {
-    'select an operator'
+    result = 'select an operator';
   }
   finalResultDisplay.innerHTML = result;
   console.log(result);
-  console.log('The result is ...', result);
+  console.log('The result is' , result);
 }
